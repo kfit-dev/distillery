@@ -56,6 +56,9 @@ fi
 # Then, backup the packaged configs
 cp -a "$REL_DIR/sys.config" "$REL_DIR/sys.config.bak"
 cp -a "$REL_DIR/vm.args" "$REL_DIR/vm.args.bak"
+# Remove the existing vm.args
+rm -rf "$REL_DIR/sys.config"
+rm -rf "$REL_DIR/vm.args"
 # Then, substitute in the prepared configs
 cp -a "$SYS_CONFIG_PATH" "$REL_DIR/sys.config"
 cp -a "$VMARGS_PATH" "$REL_DIR/vm.args"
