@@ -54,14 +54,14 @@ if [ -f "$REL_DIR/vm.args.bak" ]; then
     mv "$REL_DIR/vm.args.bak" "$REL_DIR/vm.args"
 fi
 # Then, backup the packaged configs
-cp -a "$REL_DIR/sys.config" "$REL_DIR/sys.config.bak"
-cp -a "$REL_DIR/vm.args" "$REL_DIR/vm.args.bak"
+# cp -a "$REL_DIR/sys.config" "$REL_DIR/sys.config.bak"
+# cp -a "$REL_DIR/vm.args" "$REL_DIR/vm.args.bak"
 # Remove the existing vm.args
-rm -rf "$REL_DIR/sys.config"
-rm -rf "$REL_DIR/vm.args"
+# rm -rf "$REL_DIR/sys.config"
+# rm -rf "$REL_DIR/vm.args"
 # Then, substitute in the prepared configs
-cp -a "$SYS_CONFIG_PATH" "$REL_DIR/sys.config"
-cp -a "$VMARGS_PATH" "$REL_DIR/vm.args"
+# cp -a "$SYS_CONFIG_PATH" "$REL_DIR/sys.config"
+# cp -a "$VMARGS_PATH" "$REL_DIR/vm.args"
 
 # Run any pre-upgrade tasks
 run_hooks pre_upgrade
